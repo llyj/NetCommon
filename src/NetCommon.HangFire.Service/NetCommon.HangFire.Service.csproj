@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Jak.ScheduledTaskSystem.Service\Jak.ScheduledTaskSystem.Service.csproj" />
+    <ProjectReference Include="..\NetCommon.HangFire\NetCommon.HangFire.csproj" />
+    <ProjectReference Include="..\NetCommon.Scheduler\NetCommon.Scheduler.csproj" />
+  </ItemGroup>
+
+</Project>

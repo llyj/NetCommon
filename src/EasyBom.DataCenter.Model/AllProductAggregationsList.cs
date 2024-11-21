@@ -1,0 +1,42 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text.Json.Serialization;
+using System.Runtime.Serialization;
+using System.Collections.ObjectModel;
+using System.ComponentModel.DataAnnotations;
+namespace EasyBom.DataCenter.Model
+{
+    public class AllProductAggregationsList
+    {
+        /// <summary>
+        /// 聚合名称
+        /// </summary>
+        [JsonPropertyName("AggregationName")]
+        public string AggregationName { get; set; }
+
+        /// <summary>
+        /// 自定义名称
+        /// </summary>
+        [JsonPropertyName("CustomName")]
+        public string CustomName { get; set; }
+
+        /// <summary>
+        /// SEO标题
+        /// </summary>
+        [JsonPropertyName("SEOTitle")]
+        public string SEOTitle { get; set; }
+
+        /// <summary>
+        /// 是否是聚合
+        /// </summary>
+        [JsonPropertyName("IsAggregation")]
+        public bool? IsAggregation { get; set; }
+
+        /// <summary>
+        /// 一级分类列表
+        /// </summary>
+        [JsonPropertyName("AllProductCategoryLists")]
+        public List<AllProductCategoryList> AllProductCategoryLists { get; set; }
+
+    }
+}

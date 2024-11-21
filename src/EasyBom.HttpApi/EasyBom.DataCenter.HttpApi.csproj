@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	  <Version>0.1.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="WebApiClientCore" Version="2.1.4" />
+    <PackageReference Include="WebApiClientCore.Extensions.OAuths" Version="2.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EasyBom.DataCenter.Model\EasyBom.DataCenter.Model.csproj" />
+    <ProjectReference Include="..\NetCommon.FreeRedis\NetCommon.FreeRedis.csproj" />
+  </ItemGroup>
+
+</Project>
