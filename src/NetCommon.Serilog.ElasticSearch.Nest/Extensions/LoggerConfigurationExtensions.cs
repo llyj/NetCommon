@@ -24,7 +24,7 @@ namespace NetCommon.Serilog.ElasticSearch.Nest.Extensions
         {
             var elasticNodeUris = new List<Uri>() { new Uri(logToElasticSearch.HostUrl) };
 
-            var singleNodeConnectionPool = new SingleNodeConnectionPool(new Uri("http://192.168.0.20:1200"));
+            var singleNodeConnectionPool = new SingleNodeConnectionPool(new Uri(logToElasticSearch.HostUrl));
 
             return configuration
                 .WriteTo.Elasticsearch(new ElasticsearchSinkOptions(singleNodeConnectionPool)

@@ -2,3 +2,4 @@
 /**/bin
 /**/obj
 NetCommon.sln.DotSettings.user
+/src/NetCommon.Serilog/Properties/PublishProfiles

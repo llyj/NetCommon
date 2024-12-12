@@ -6,12 +6,11 @@ using System.Text;
 using System.Threading.Tasks;
 using NetCommon.Serilog.Config;
 using Serilog;
-using Serilog.Events;
 using Serilog.Sinks.MSSqlServer;
 
 namespace NetCommon.Serilog.Extensions
 {
-    public static class LoggerConfigurationExtensions
+    public static class DatabaseLoggerConfigurationExtensions
     {
         /// <summary>
         /// 输出日志到数据库
@@ -31,7 +30,7 @@ namespace NetCommon.Serilog.Extensions
             var columnOptions = new ColumnOptions();
 
             // 去除部分默认列
-            //columnOptions.Store.Remove(StandardColumn.MessageTemplate);
+            columnOptions.Store.Remove(StandardColumn.MessageTemplate);
             //columnOptions.Store.Remove(StandardColumn.Properties);
 
             // 添加列

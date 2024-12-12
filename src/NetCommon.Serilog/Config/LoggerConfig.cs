@@ -16,7 +16,7 @@ namespace NetCommon.Serilog.Config
     }
 
     /// <summary>
-    /// 日志存到ElasticSearch
+    /// 记录日志到ElasticSearch
     /// </summary>
     public class LogToElasticSearch
     {

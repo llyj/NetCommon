@@ -8,19 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using Elastic.Channels;
 using Elastic.CommonSchema.Serilog;
+using Elastic.Ingest.Elasticsearch.DataStreams;
 using Elastic.Transport;
 using NetCommon.Serilog.Config;
-using DataStreamName = Elastic.Ingest.Elasticsearch.DataStreams.DataStreamName;
 
-namespace NetCommon.Serilog.ElasticSearch.Extensions
+namespace NetCommon.Serilog.Extensions
 {
-    public static class LoggerConfigurationExtensions
+    public static class ElasticSearchLoggerConfigurationExtensions
     {
         /// <summary>
         /// 输出日志到 ElasticSearch
         /// </summary>
         /// <param name="configuration"></param>
-        /// <param name="elasticSearchConfig">ElasticSearch 配置</param>
+        /// <param name="logToElasticSearch">ElasticSearch 配置</param>
         /// <returns></returns>
         public static LoggerConfiguration UseElasticSinks(this LoggerConfiguration configuration, LogToElasticSearch logToElasticSearch)
         {
@@ -52,6 +52,7 @@ namespace NetCommon.Serilog.ElasticSearch.Extensions
         /// 输出日志到 ElasticSearch
         /// </summary>
         /// <param name="configuration"></param>
+        /// <param name="logToElasticSearch">ElasticSearch 配置</param>
         /// <param name="transport">ElasticSearch 传输</param>
         /// <returns></returns>
         public static LoggerConfiguration UseElasticSinks(this LoggerConfiguration configuration, LogToElasticSearch logToElasticSearch, ITransport transport)
